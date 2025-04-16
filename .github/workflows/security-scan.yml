@@ -25,7 +25,7 @@ jobs:
           image-ref: my-app:latest
           format: table
           severity: CRITICAL,HIGH
-          vuln_type: os,library
+          vuln-type: os,library
           exit-code: 1
 
       - name: Run Synk container scan
