@@ -48,5 +48,5 @@ jobs:
       - name: Confirm Snyk project created
       
         run: | 
-        echo "Check your dashboard at: https://app.snyk.io/org/kareemster/projects"
+          echo "Check your dashboard at: https://app.snyk.io/org/kareemster/projects"
 
