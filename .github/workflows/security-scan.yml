@@ -25,3 +25,14 @@ jobs:
           image-ref: my-app:latest
           format: table
           severity: CRITICAL,HIGH
+          vuln_type: os,library
+          exit-code: 1
+
+      - name: Run Synk container scan
+        uses: snyk/actions/docker@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          image: my-app:latest
+          args: --severity-threshold=high
+
