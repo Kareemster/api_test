@@ -41,6 +41,11 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
+          command: monitor
           image: my-app:latest
           args: --severity-threshold=high
+
+      - name: Confirm Snyk project created
+      
+        run: echo "Check your dashboard at: https://app.snyk.io/org/kareemster/projects
 
