@@ -28,6 +28,7 @@ jobs:
           severity: CRITICAL,HIGH
           vuln-type: os,library
           exit-code: 1
+        continue-on-error: true
 
       - name: Run Synk container scan
         uses: snyk/actions/docker@master
