@@ -22,6 +22,7 @@ jobs:
       - name: Run Trivy scan on Docker image
         uses: aquasecurity/trivy-action@master
         with:
+          scan-type: image
           image-ref: my-app:latest
           format: table
           severity: CRITICAL,HIGH
